@@ -1,0 +1,15 @@
+artifact_uri: file:///home/azureuser/App/da_project/mlruns/0/a2445d7715274ae39b6b9d5c09c7fa73/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+name: ''
+run_id: a2445d7715274ae39b6b9d5c09c7fa73
+run_uuid: a2445d7715274ae39b6b9d5c09c7fa73
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1644775394938
+status: 1
+tags: []
+user_id: azureuser
