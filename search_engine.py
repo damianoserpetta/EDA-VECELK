@@ -11,10 +11,6 @@ from utils import convert_json_to_dicts
 import os
 from typing import Optional
 
-#page_crawl_url = "https://www.industrial-iot.it/en/"
-#page_crawl_filter = "industrial-iot\.it\/en\/"
-
-
 class search_engine():
 
     melastic = None
