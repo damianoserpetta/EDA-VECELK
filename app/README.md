@@ -36,7 +36,10 @@ chrome-driver (scraping), fastapi ..
 
 #### Docker
 
-Docker Compose needs to be installed on target machine.
+Docker Engine & Docker Compose needs to be installed on target machine.
+
+Docker Engine can be installed by follow instruction on Docker Website:
+https://docs.docker.com/engine/install/
 
 Docker Compose can be installed by follow instruction on Docker Website:
 https://docs.docker.com/compose/install/
@@ -56,6 +59,8 @@ Development and Testing of the project are made on an Azure Virtual Machine.
 ### Docker
 
 ### Elastic-Search (and Kibana)
+
+screenshot di elastic search e kibana partiti...
 
 ### Application
 

@@ -13,6 +13,7 @@ services:
   kibana:
     container_name: kb-container
     image: docker.elastic.co/kibana/kibana:7.11.0
+    xpack.security.enabled: true
     environment:
       - ELASTICSEARCH_HOSTS=http://es-container:9200
     networks:
