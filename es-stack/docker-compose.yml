@@ -3,7 +3,8 @@ services:
   elasticsearch:
     container_name: es-container
     image: "elasticsearch:7.9.2"
-    xpack.security.enabled: true
+    environment:
+      - xpack.security.enabled: true
     networks:
       - es-net
     ports:
