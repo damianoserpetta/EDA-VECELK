@@ -16,15 +16,30 @@ library for semantic search on top.....
 
 #### Python
 
-Python 3.6 needs to be installed on target machine.
+Python 3 and pip (_package manager_) needs to be installed on target machine.
 
 ##### Dependecies
+
+Haystack framework needs to be installed on target machine via pip.
+
+```
+pip install farm-haystack
+```
+
+> **Note:** For Windows you need to install _PyTorch_
+>
+> ```
+> pip install farm-haystack -f https://download.pytorch.org/whl/torch_stable.html
+> ```
 
 chrome-driver (scraping), fastapi ..
 
 #### Docker
 
-Docker needs to be installed on target machine.
+Docker Compose needs to be installed on target machine.
+
+Docker Compose can be installed by follow instruction on Docker Website:
+https://docs.docker.com/compose/install/
 
 ## Configuration
 
@@ -35,7 +50,7 @@ Development and Testing of the project are made on an Azure Virtual Machine.
 | **MACHINE** | Azure Standard D4s v3           |
 | **CPU**     | Intel Xeon E5-2673 v4 (4 vCPUs) |
 | **RAM**     | 16GB                            |
-| **GPU**     | /                               |
+| **GPU**     | No                              |
 | **STORAGE** | 256GB                           |
 
 ### Docker
