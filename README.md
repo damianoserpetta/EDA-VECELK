@@ -8,36 +8,37 @@ Application and API Service for _semantic search_ over large document collection
 
 The application follows hardware requirements of Haystack and Elasticsearch, because due to indexing, documents processing, filtering and searching with **NLP** (Natural Language Processing) **Models**, it needs at least **8-16GB** RAM and a powerful CPU like the one described below in Configuration chapter.
 
-### Software
+### Software <img src="images/pythonpng.png" alt="drawing" width="15"/>
 
-The application is compatible with Linux, Windows and MacOS. Hovewer, each OS requires his own measures to make the system work properly.
+The application is compatible with **Linux**, **Windows** and **MacOS**. Hovewer, each OS requires his own measures to make the system work properly.
 
-#### Python
-
-<img src="images/pythonpng.png" alt="drawing" width="15"/>
-Python is the main core of the application.
+**Python** is the main core of the application.
 
 #### Haystack
 
 Haystack is an open-source framework for building **search systems** that work through words and sentences' semantic similarities over large document collections.
-Haystack functionalities are built using _Natural Language Processing_ Models, capable of understanding natural human language and perform searches by semantic similarities.
+Haystack functionalities are built using _Natural Language Processing_ Models, capable of understanding **natural human language** and perform searches by **semantic similarities**.
 
-Recent advances in NLP have enabled the application of question answering, retrieval and summarization to real world settings and Haystack is designed to be the bridge between research and industry.
+Recent advances in NLP have enabled the application of question answering, retrieval and summarization to real world settings and Haystack is designed to **be the bridge** between research and industry.
+
+Haystack's core are made of **nodes**, to process informations, data, queries, answers, and **pipelines**, to envelop nodes in defined processes to obtain an result.
 
 ![haystack](images/haystack.png)
 
 #### Elastic Search
 
-Elasticsearch is a distributed engine for all types of data, including textual, numerical, geospatial, structured, and unstructured.
+Elasticsearch is a **distributed engine** for all types of data, including textual, numerical, geospatial, structured, and unstructured.
 
-Raw data flows into Elasticsearch from a variety of sources, including logs, system metrics, and web applications. Data ingestion is the process by which this raw data is parsed, normalized, and enriched before it is indexed in Elasticsearch. Once indexed in Elasticsearch, users can run complex queries against their data and use aggregations to retrieve complex summaries of their data.
+Elasticsearch store data in **documents**, who are results of raw data processing from a variety of sources, including logs, system metrics, and web applications. After data processing, **data ingestion** is the process by which this raw data is parsed, normalized, and enriched before it is indexed in Elasticsearch.
+
+Once indexed in Elasticsearch, users can run **complex queries** against their data and use aggregations to retrieve complex summaries of their data.
+
+The combination of Elastic Search, Haystack and NLP Models results in a **complex** and **powerful** **search engine system** over unstructured data crawled from external sources.
+
+Visualization of data over Elastic Search is provided by Kibana, tool who allows users to create powerful visualizations of their data, share dashboards, and manage the Elastic Stack.
 
 TODO scrivere di più
 TODO screenshots
-
-##### Kibana
-
-Kibana, who belongs to ELK Stack, allows users to create powerful visualizations of their data, share dashboards, and manage the Elastic Stack.
 
 TODO screenshots
 
