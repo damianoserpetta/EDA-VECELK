@@ -14,7 +14,7 @@ The application is compatible with **Linux**, **Windows** and **MacOS**. Hovewer
 
 **Python** is the main core of the application.
 
-#### Haystack
+### Haystack
 
 Haystack is an open-source framework for building **search systems** that work through words and sentences' semantic similarities over large document collections.
 Haystack functionalities are built using _Natural Language Processing_ Models, capable of understanding **natural human language** and perform searches by **semantic similarities**.
@@ -25,7 +25,7 @@ Haystack's core are made of **nodes**, to process informations, data, queries, a
 
 ![haystack](images/haystack.png)
 
-#### Elastic Search
+### Elastic Search
 
 Elasticsearch is a **distributed engine** for all types of data, including textual, numerical, geospatial, structured, and unstructured.
 
@@ -42,7 +42,7 @@ TODO screenshots
 
 TODO screenshots
 
-#### Docker
+### Docker
 
 Docker Engine is an open source **containerization** technology for building and containerizing applications.
 In this application context, docker is used to create, start and manage the Elastic Stack instance, composed by Elastic Search, Kibana and the Docker Network who envelop them.
