@@ -20,19 +20,21 @@ Python 3 and pip (_package manager_) needs to be installed on target machine.
 
 ##### Dependecies
 
+uvicorn...
+pip install -r requirements.txt
 Haystack framework needs to be installed on target machine via pip.
 
 ```
-pip install farm-haystack
+pip install farm-haystack[crawler]
 ```
 
 > **Note:** For Windows you need to install _PyTorch_
 >
 > ```
-> pip install farm-haystack -f https://download.pytorch.org/whl/torch_stable.html
+> pip install farm-haystack[crawler] -f https://download.pytorch.org/whl/torch_stable.html
 > ```
 
-chrome-driver (scraping), fastapi ..
+chromedriver (google chrome (not chromium) installed) (scraping), fastapi .. pip install requirements
 
 #### Docker
 
