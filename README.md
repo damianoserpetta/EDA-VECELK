@@ -283,6 +283,13 @@ Main object of Model is identified in _search_engine_ class, who, managed by con
 
 Haystack library provides classes and modules (_called nodes_) to perform semantic searches.
 
+Features of semantic search over documents is performed by several nodes in Haystack.
+
+Nodes are the core components that process incoming text. Some perform preprocessing steps like cleaning or splitting of text while others engage transformer models to retrieve documents, summarize passages or generate questions.
+
+Nodes are chained together using a Pipeline. In Haystack, there are many Nodes that you can already start using.
+
+**Retriever** node
 how it works...
 how implemented...
 nodes...
