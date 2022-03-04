@@ -285,23 +285,44 @@ Haystack library provides classes and modules (_called nodes_) to perform semant
 
 Features of semantic search over documents is performed by several nodes in Haystack.
 
-Nodes are the core components that process incoming text. Some perform preprocessing steps like cleaning or splitting of text while others engage transformer models to retrieve documents, summarize passages or generate questions.
+Nodes are the core components that **process** incoming text. Some perform preprocessing steps like cleaning or splitting of text while others engage transformer models to retrieve documents, summarize passages or generate questions.
 
-Nodes are chained together using a Pipeline. In Haystack, there are many Nodes that you can already start using.
+Nodes are chained together using a **Pipeline**. In Haystack, there are many Nodes that you can already start using.
 
-**Retriever** node
-how it works...
-how implemented...
-nodes...
+#### Pipeline
+
+Pipeline implemented and used in the project is composed by two components:
+
+- **Retriever** node is a lightweight filter that can quickly go through the full document store and pass on a set of candidate documents that are relevant to the query. When used in combination with a Reader, it is a tool for sifting out irrelevant documents, saving the Reader from doing more work than it needs to and speeding up the querying process.
+
+- **Reader** node, also known as Open-Domain QA systems in Machine Learning speak, is the core component that enables Haystack to find the answers that you need.
+
+The pipeline, who works on top of the document store (represented by elastic search), implements semantic search functions on the project, using it in the query endpoints.
+
+#### Crawler
+
+Crawler is a module who permits the extraction of text data from a website and nested pages contained.
+
+Crawler component craw URL(s), extract the text from the HTML, create a Haystack Document object out of it and save it (one JSON file per URL), including text and basic meta data. You can optionally specify via Filter Urls to only crawl URLs that match a certain pattern.
+
+The module make use of chrome-driver for the process of data extraction from website.
 
 ### NLP Models
 
-models used in...
-models availables...
-tuning models...
-annotation tool...
-answer feedbacks...
-tuning using base model and pre-trained model...
+Natural Language Processing Models are **machine learning techniques** where human language is separated into fragments so that the grammatical structure of sentences and the meaning of words can be **analyzed** and **understood** in context.
+This helps computers read and understand spoken or written text in the same way as humans.
+
+NLP Model used in the project is pre-trained **RoBERTa** (Robustly Optimized BERT Pretraining Approach), trained on SQuAD (Stanford Question Answering Dataset).
+
+The model is used by haystack to perform **Extractive Question & Answer Pipeline** over documents.
+
+Various models are disponible to be used with Haystack, either pre-trained or base models.
+
+#### Fine Tune
+
+If you have domain-specific questions, fine-tuning your model on custom examples will very likely boost your performance. While this varies by domain, we saw that ~ 2000 examples can easily increase performance by +5-20%.
+
+Fine tuning of NLP models can be made with Haystack from **annotation tool** or **answer feedback**.
 
 ### Search Engine
 
@@ -309,19 +330,12 @@ extractive qa pipeline...
 caricamento all'inizio della pipeline...
 configurazione pipeline...
 
-#### Retriever
-
-#### Reader
-
 ### Document Store
 
 communication...
 pre processing...
 indexing...
-
-### Scraper
-
-configuration...
+crawler configuration...
 folder to download on...
 
 ### API
