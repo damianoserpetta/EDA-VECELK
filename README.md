@@ -37,11 +37,6 @@ The combination of Elastic Search, Haystack and NLP Models results in a **comple
 
 Visualization of data over Elastic Search is provided by **Kibana**, which allows users to create powerful visualizations of their data, share dashboards, and manage the Elastic Stack.
 
-TODO scrivere di più
-TODO screenshots
-
-TODO screenshots
-
 ### Docker
 
 <img src="docs/images/1%20rCo_Q1-f7V5zYoKAQed_Mw.png" alt="python" width="240" style="float:right">
@@ -49,8 +44,6 @@ TODO screenshots
 Docker Engine is an open source **containerization** technology for building and containerizing applications.
 In this application context, docker is used to create, start and manage the Elastic Stack **instance**, composed by Elastic Search, Kibana and the Docker Network who envelop them.
 Docker Compose permits to **manage several containers** docker. In Docker Compose are defined, by the _docker-compose.yml_ file, the services that make up and run the application in an **isolated** and **controlled** environment.
-
-TODO screenshots..
 
 ## Configuration
 
