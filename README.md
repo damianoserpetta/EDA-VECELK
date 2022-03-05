@@ -326,31 +326,50 @@ Fine tuning of NLP models can be made with Haystack from **annotation tool** or 
 
 ### Search Engine
 
-extractive qa pipeline...
-caricamento all'inizio della pipeline...
-configurazione pipeline...
+Search Engine is the custom class who provides all functions and processes to do semantic search over documents.
+
+The class respects philosophy of **separation of concerns**, is the main class of application and it manages all other classes, each for one single purpose.
+
+In answer retriever part, an haystack pipeline is composed and built for extraction process:
+
+- Retriever: node who filter documents in Document Store.
+- Reader: a FARMReader (transformer based) is configured with RoBERTa NLP Model, who is loaded at pipeline building.
+
+Pipeline is built at application startup and consequently executed when user requests for an answer.
 
 ### Document Store
 
-communication...
-pre processing...
-indexing...
-crawler configuration...
-folder to download on...
+Document Store represents the Document management system provided by Elastic Search Engine.
+
+Document Store is accessed through haystack but can be accessed also from API.
+
+Elastic Search provides mechanism of de-normalization and reverse indexing for searching improvements and better execution.
+
+Document Store is provided by elastic class, located in _datasource/elastic.py_
+
+Documents stored are passed into from this class, and its retrieved from crawler components, who download website's pages, convert into documents firstly and after in dictionaries, process text to clean it, and ingest in elastic search.
+
+In crawler component, one time the documents are ingested in elastic search, they are removed from file system.
 
 ### API
 
 API Service is developed by using **FASTApi** framework for Python, which works as controller for the application.
 
-API Service starts at port 5000 in localhost (_configurable_)
+API Service starts in localhost (_configurable_) and remains listening for requests on port 5000.
 
-json...
-authentication implementable...
-swagger ui...
-tests with postman...
-elasticsearch api...
-response models...
+Requests and responses are made through HTTP and the data exhanged is in JSON format, following the schema classes type.
+
+UI Visualization of API is provided by Swagger UI, who can be reached by path **_/docs_**.
+
+Some tests made with Postman:
+
+<img src="docs/images/postman_api2.png" alt="postman_api">
 
 ## Results
 
 ## Future Improvements
+
+authentications..
+model training and fine tuning...
+more functions on application...
+research for usages...
