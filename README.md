@@ -367,9 +367,32 @@ Some tests made with Postman:
 
 ## Results
 
+Answers retrieved from Haystack in most cases meets our expectations and level of reliability of them.
+
+Haystack needs large datasets to work properly and to retrieve better answers related to questions.
+
+In test environment, we tried with dataset crawled from www.industrial-iot.it/en/ and ask some questions to the system: also if dataset is not so large, answer retrieval process works fine in that context.
+
+We can distinguish answers reliability in some factors:
+
+- Right Answer
+  - Right Context
+  - Wrong Context
+- Wrong answer
+  - Right Context
+  - Wrong Context
+
+Naturally, we can rank answers score upon those factors and correct them with NLP Model Fine-Tuning.
+
+### Some other screenshots:
+
+<img src="docs/images/postman_api.png" alt="postman_api1">
+<img src="docs/images/postman_api3.png" alt="postman_api3">
+
 ## Future Improvements
 
 authentications..
 model training and fine tuning...
+better crawler...
 more functions on application...
 research for usages...
