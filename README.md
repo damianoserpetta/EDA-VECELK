@@ -140,7 +140,9 @@ Project's dependencies are resolved by pip using the _requirements.txt_ file pre
 
 To install dependencies:
 
-> pip install -r requirements.txt
+```
+$ pip install -r requirements.txt
+```
 
 ### Haystack
 
@@ -148,11 +150,15 @@ To install dependencies:
 
 Haystack framework, within his crawler component, needs to be installed on target machine via pip.
 
-> pip install farm-haystack[crawler]
+```
+$ pip install farm-haystack[crawler]
+```
 
 **Note:** For Windows you need to install _PyTorch_:
 
-> pip install farm-haystack[crawler] -f https://download.pytorch.org/whl/torch_stable.html
+```
+$ pip install farm-haystack[crawler] -f https://download.pytorch.org/whl/torch_stable.html
+```
 
 ### Application
 
@@ -166,7 +172,9 @@ Docker-compose needs privileges to be executed.
 
 Start containers in directory path where the configuration file is contained:
 
-> sudo docker-compose up
+```
+$ sudo docker-compose up
+```
 
 Elastic Search service **starts** at port **9200**
 
@@ -180,7 +188,9 @@ Kibana service **starts** at port **5601**
 
 In project directory, run following command:
 
-> python3 server.py
+```
+$ python3 server.py
+```
 
 Application will start loading NLP Models from cache or online repository.
 
@@ -294,7 +304,7 @@ The pipeline, who works on top of the document store (represented by elastic sea
 
 #### Crawler
 
-Crawler is a module who permits the extraction of text data from a website and nested pages contained.
+Crawler is a module who permits the **extraction** of text data from a website and nested pages contained.
 
 Crawler component craw URL(s), extract the text from the HTML, create a Haystack Document object out of it and save it (one JSON file per URL), including text and basic meta data. You can optionally specify via Filter Urls to only crawl URLs that match a certain pattern.
 
@@ -332,15 +342,15 @@ Pipeline is built at application startup and consequently executed when user req
 
 ### Document Store
 
-Document Store represents the Document management system provided by Elastic Search Engine.
+Document Store represents the **Document management system** provided by Elastic Search Engine.
 
 Document Store is accessed through haystack but can be accessed also from API.
 
-Elastic Search provides mechanism of de-normalization and reverse indexing for searching improvements and better execution.
+Elastic Search provides mechanism of **de-normalization** and r**everse indexing** for searching improvements and better execution.
 
 Document Store is provided by elastic class, located in _datasource/elastic.py_
 
-Documents stored are passed into from this class, and its retrieved from crawler components, who download website's pages, convert into documents firstly and after in dictionaries, process text to clean it, and ingest in elastic search.
+Documents stored are **passed into** from this class, and its retrieved from crawler components, who download website's pages, convert into documents firstly and after in dictionaries, process text to clean it, and ingest in elastic search.
 
 In crawler component, one time the documents are ingested in elastic search, they are removed from file system.
 
@@ -350,7 +360,7 @@ API Service is developed by using **FASTApi** framework for Python, which works 
 
 API Service starts in localhost (_configurable_) and remains listening for requests on port 5000.
 
-Requests and responses are made through HTTP and the data exhanged is in JSON format, following the schema classes type.
+Requests and responses are made through HTTP and the data exhanged is in **JSON format**, following the schema classes type.
 
 UI Visualization of API is provided by Swagger UI, who can be reached by path **_/docs_**.
 
@@ -362,11 +372,11 @@ Some tests made with Postman:
 
 Answers retrieved from Haystack in most cases meets our expectations and level of reliability of them.
 
-Haystack needs large datasets to work properly and to retrieve better answers related to questions.
+Haystack needs **large datasets** to work properly and to retrieve better answers related to questions.
 
 In test environment, we tried with dataset crawled from www.industrial-iot.it/en/ and ask some questions to the system: also if dataset is not so large, answer retrieval process works fine in that context.
 
-We can distinguish answers reliability in some factors:
+We can distinguish answers reliability in some **factors**:
 
 - Right Answer
   - Right Context
@@ -382,10 +392,16 @@ Naturally, we can rank answers score upon those factors and correct them with NL
 <img src="docs/images/postman_api.png" alt="postman_api1">
 <img src="docs/images/postman_api3.png" alt="postman_api3">
 
-## Future Improvements
+## Future Developments
 
-authentications..
-model training and fine tuning...
-better crawler...
-more functions on application...
-research for usages...
+Future developments concerns on how to **improve** the system and which functionalities can **extend** the application.
+
+Fine tuning Machine Learning Models is important to retrieve better results also to **specific environment** and user requirements. How the fine tuning can be made is discussed above.
+
+The possibilities to fine-tune an QA system are **various**. An idea for a deployed system can be taking a base model (or also pre-trained) and fine-tune it by the users that use it (providing a feedback on the answer and provide for elaborate them to train model) and by the developers with more specific and accurately fine-tune.
+
+Crawling websites could be more **accurate**, in particular Crawler component doesn't filter by type of content on website: For example, Privacy and Cookie Policy description can be deleted from the website.
+
+Authentication can be implemented to REST API Service: one idea can be implement **Json Web Token** (_JWT_) and develop a token-based security mechanism.
+
+Lastly, it would be interesting to study and to do a research for usages in** real world use cases**.
