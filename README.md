@@ -10,7 +10,7 @@ The application follows hardware requirements of Haystack and Elasticsearch, bec
 
 ### Software <img src="docs/images/pythonpng.png" alt="python" width="15"/>
 
-The application is compatible with **Linux**, **Windows** and **MacOS**. Hovewer, each OS requires his own measures to make the system work properly.
+The application is compatible with **Linux**, **Windows** and **MacOS**. However, each OS requires his own measures to make the system work properly.
 
 **Python** is the main core of the application.
 
@@ -306,7 +306,7 @@ The pipeline, who works on top of the document store (represented by elastic sea
 
 Crawler is a module who permits the **extraction** of text data from a website and nested pages contained.
 
-Crawler component craw URL(s), extract the text from the HTML, create a Haystack Document object out of it and save it (one JSON file per URL), including text and basic meta data. You can optionally specify via Filter Urls to only crawl URLs that match a certain pattern.
+Crawler component crawl URL(s), extract the text from the HTML, create a Haystack Document object out of it and save it (one JSON file per URL), including text and basic meta data. You can optionally specify via Filter Urls to only crawl URLs that match a certain pattern.
 
 The module make use of chrome-driver for the process of data extraction from website.
 
@@ -323,7 +323,7 @@ Various models are disponible to be used with Haystack, either pre-trained or ba
 
 #### Fine Tune
 
-If you have domain-specific questions, fine-tuning your model on custom examples will very likely boost your performance. While this varies by domain, we saw that ~ 2000 examples can easily increase performance by +5-20%.
+If you have domain-specific questions, fine-tuning your model on custom examples will very likely boost your performance. While this varies by domain, Haystack saw that ~ 2000 examples can easily increase performance by +5-20%.
 
 Fine tuning of NLP models can be made with Haystack from **annotation tool** or **answer feedback**.
 
@@ -360,7 +360,7 @@ API Service is developed by using **FASTApi** framework for Python, which works 
 
 API Service starts in localhost (_configurable_) and remains listening for requests on port 5000.
 
-Requests and responses are made through HTTP and the data exhanged is in **JSON format**, following the schema classes type.
+Requests and responses are made through HTTP and the data exchanged is in **JSON format**, following the schema classes type.
 
 UI Visualization of API is provided by Swagger UI, who can be reached by path **_/docs_**.
 
@@ -404,4 +404,4 @@ Crawling websites could be more **accurate**, in particular Crawler component do
 
 Authentication can be implemented to REST API Service: one idea can be implement **Json Web Token** (_JWT_) and develop a token-based security mechanism.
 
-Lastly, it would be interesting to study and to do a research for usages in** real world use cases**.
+Lastly, it would be interesting to study and to do a research for usages in **real world use cases**.
